@@ -1,6 +1,6 @@
 import pygame, sys
 import random
-import time
+
 
 pygame.init()
 def make_road():
@@ -57,26 +57,26 @@ clock = pygame.time.Clock()
 player_score = 0
 game_active = True
 
-game_over_screen = pygame.image.load('E:/Python/RetroRacer/assets/gameover.png').convert_alpha()
+game_over_screen = pygame.image.load('/assets/gameover.png').convert_alpha()
 game_over_rect = game_over_screen.get_rect(center=(300,300))
 
 # Background Surface image load
-bg_surface = pygame.image.load('E:/Python/RetroRacer/assets/Background.png').convert()
+bg_surface = pygame.image.load('/assets/Background.png').convert()
 
 # Road Surface  assets load
-road_surface = pygame.image.load('E:/Python/RetroRacer/assets/Road.png').convert()
+road_surface = pygame.image.load('/assets/Road.png').convert()
 road_surface = pygame.transform.scale(road_surface,(300,600))
 road_pos_y = 0
 
 # Player car asset load
-player_car = pygame.image.load('E:/Python/RetroRacer/assets/red_car_bg.png').convert_alpha()
+player_car = pygame.image.load('/assets/red_car_bg.png').convert_alpha()
 player_car = pygame.transform.scale2x(player_car)
 player_car_position_x = 0
 player_rect = player_car.get_rect(center=(300,490))
 
 # Enemy car asset load
-ai_car1 = pygame.transform.scale2x(pygame.image.load('E:/Python/RetroRacer/assets/yellow_car_ai.png').convert_alpha()) # combining the above 2 lines of code to shorten it
-ai_car2 = pygame.transform.scale2x(pygame.image.load('E:/Python/RetroRacer/assets/blue_car_ai.png').convert_alpha())
+ai_car1 = pygame.transform.scale2x(pygame.image.load('/assets/yellow_car_ai.png').convert_alpha()) # combining the above 2 lines of code to shorten it
+ai_car2 = pygame.transform.scale2x(pygame.image.load('/assets/blue_car_ai.png').convert_alpha())
 ai_car = []
 SPAWNCARS = pygame.USEREVENT
 pygame.time.set_timer(SPAWNCARS,1600)
